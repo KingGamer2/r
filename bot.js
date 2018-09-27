@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "="
-const adminprefix = "--" 
+const prefix = "R"
+const adminprefix = "-" 
 client.on("message", message => {
  
   function discoRole() {
@@ -40,7 +40,7 @@ const roles = config.roleToDisco;
 
 
 client.on('message', function(message) {
-	const myID = "214037704042610690";
+	const myID = "303225158473220098";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(adminprefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -102,7 +102,7 @@ client.on('message', function(message) {
 
   client.on('message',async message => {
     if(message.content.startsWith(adminprefix + "restart")) {
-        if(message.author.id !== "214037704042610690") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "303225158473220098") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
